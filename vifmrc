@@ -157,6 +157,11 @@ mark v ~/.vim/bundle/
 windo filter! /^.*\.(o|d|class)$|^\$RECYCLE\.BIN\/$/
 
 " ==============================================================================
+" color scheme
+
+colorscheme almost-default
+
+" ==============================================================================
 " load machine specific local set of settings
 
 source $VIFM/vifmrc_local
