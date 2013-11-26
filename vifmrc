@@ -83,6 +83,9 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,phistory,fhistory
 " custom status line look
 execute 'set' 'statusline=" '.$SL_PREFIX.' %t%= %A %10u:%-7g %15E %20d  "'
 
+" enable integration with terminal multiplexers
+screen
+
 " ==============================================================================
 " various mappings
 
