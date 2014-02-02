@@ -16,4 +16,4 @@ highlight StatusLine cterm=none                   ctermfg=black   ctermbg=white
 highlight WildMenu   cterm=underline,bold,reverse ctermfg=yellow  ctermbg=black
 highlight CmdLine    cterm=bold                   ctermfg=white   ctermbg=black
 highlight ErrorMsg   cterm=none                   ctermfg=red     ctermbg=black
-highlight Border     cterm=none                   ctermfg=black   ctermbg=white
+highlight Border     cterm=none                   ctermfg=black   ctermbg=black
