@@ -96,7 +96,7 @@ screen
 " custom status line loook
 
 " don't display file user/group on Windows
-if $OS != 'Windows_NT'
+if !has('win')
     let $RIGHTS = '%10u:%-7g '
 endif
 
