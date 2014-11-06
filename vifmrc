@@ -159,6 +159,15 @@ nnoremap zr =<c-u><cr>
 nnoremap as :%s/
 
 " ==============================================================================
+" various commands
+
+" creates directory and immediately enters it
+command! mkcd :mkdir %a | cd %a
+
+" run make in current directory
+command! make !!make %a
+
+" ==============================================================================
 " file lists configuration
 
 " default set of view columns
