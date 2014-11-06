@@ -98,7 +98,7 @@ set trashdir=%r/.vifm-Trash,$HOME/.vifm/trash
 screen
 
 " ==============================================================================
-" custom status line loook
+" custom status line look
 
 " don't display file user/group on Windows
 if !has('win')
