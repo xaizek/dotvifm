@@ -142,7 +142,7 @@ nnoremap cc cw<c-u>
 nnoremap A cw<c-w>
 
 " open vim to edit .vifmrc
-nnoremap ,c :execute ':!vim $MYVIFMRC' | restart<cr>
+nnoremap ,c :write | execute ':!%n${EDITOR:-vim} $MYVIFMRC' | restart<cr>
 " open gvim to edit .vifmrc
 nnoremap ,C :!gvim --remote-tab-silent $MYVIFMRC &<cr>
 
