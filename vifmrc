@@ -119,6 +119,7 @@ nnoremap S :sort<cr>
 
 " toggle visibility of preview window
 nnoremap w :view<cr>
+vnoremap w :view<cr>gv
 
 " moving cursor in another pane
 nnoremap J <space>j<space>
