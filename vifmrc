@@ -91,6 +91,9 @@ set rulerformat="%=%2l-%S [%L] "
 set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,phistory,fhistory
            \,dirstack,registers,bookmarks
 
+" use trash directory per mount point, fallback to ~/.vifm/trash
+set trashdir=%r/.vifm-Trash,$HOME/.vifm/trash
+
 " enable integration with terminal multiplexers
 screen
 
