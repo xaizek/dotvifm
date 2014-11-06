@@ -166,7 +166,6 @@ nnoremap ,d :set viewcolumns=-{name}.,10{perms},12{uname},-7{gname},10{size}.,20
 mark b ~/bin/
 mark c ~/.vifm/
 mark h ~/
-mark r ~/.vifm/Trash/
 mark t ~/tmp/
 mark v ~/.vim/bundle/
 
