@@ -79,7 +79,7 @@ set nowrap
 " expand tabulation characters as two spaces
 set tabstop=2
 
-" hide .. and . directories everywhere
+" hide .. directory everywhere
 set dotdirs=
 
 " custom ruler format
