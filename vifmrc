@@ -173,7 +173,7 @@ mark v ~/.vim/bundle/
 " ==============================================================================
 " filename filtering
 
-windo filter! /^.*\.(o|d|class|pyc)$|^\$RECYCLE\.BIN\/$/
+windo filter! /^.*\.(lo|o|d|class|py[co])$|.*~$|^\$RECYCLE\.BIN\/$/
 
 " ==============================================================================
 " color scheme
