@@ -70,7 +70,9 @@ set incsearch
 " try to leave some space from cursor to upper/lower border in lists
 set scrolloff=4
 
-" completely disable compatibility with older versions
+" completely disable compatibility with older versions:
+" * make yy and dd ignore selection and work with file under the cursor;
+" * make <c-i> (and <tab>) work in same way as in Vim (go forward in history).
 set cpoptions-=fst
 
 " don't wrap long lines in preview pane
