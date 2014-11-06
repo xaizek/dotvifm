@@ -155,6 +155,9 @@ nnoremap f/ /^
 " clear local filename filter
 nnoremap zr =<c-u><cr>
 
+" substitute in all files
+nnoremap as :%s/
+
 " ==============================================================================
 " file lists configuration
 
