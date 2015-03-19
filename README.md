@@ -1,7 +1,7 @@
 ## Install
 
 ```bash
-git clone git@github.com:xaizek/dotvifm.git ~/.vifm
+git clone https://github.com/xaizek/dotvifm.git ~/.vifm
 ```
 
 ## Machine-specific configuration
