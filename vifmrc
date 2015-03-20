@@ -128,11 +128,6 @@ vnoremap w :view<cr>gv
 nnoremap J <space>j<space>
 nnoremap K <space>k<space>
 
-" open file in existing instance of gvim
-nnoremap o :![ -z "$(gvim --serverlist)" ] && gvim %f || gvim --remote-tab-silent %f &<cr>
-" open file in new instance of gvim
-nnoremap O :!gvim %f &<cr>
-
 " open file in the background using its default program
 nnoremap gb :file &<cr>l
 
@@ -166,6 +161,19 @@ command! mkcd :mkdir %a | cd %a
 
 " run make in current directory
 command! make !!make %a
+
+" ==============================================================================
+" targeting Vim instances
+
+" set target Vim server name
+command! target : let $VIMARGS = '--servername "%a"'
+               \| execute "!tmux %%i set-environment VIMARGS '".$VIMARGS."'"
+
+" open file in existing instance of gvim (uses target)
+nnoremap o :    ![ -z "$(gvim --serverlist)" ] && gvim $VIMARGS %f
+           \ || gvim $VIMARGS --remote-tab-silent %f &<cr>
+" open file in new instance of gvim
+nnoremap O :!gvim %f &<cr>
 
 " ==============================================================================
 " file lists configuration
