@@ -94,6 +94,9 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,phistory,fhistory
 " use trash directory per mount point, fallback to ~/.vifm/trash
 set trashdir=%r/.vifm-Trash,$HOME/.vifm/trash
 
+" perform file operations via system calls
+set syscalls
+
 " ==============================================================================
 " custom status line look
 
