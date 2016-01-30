@@ -94,9 +94,6 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,phistory,fhistory
 " use trash directory per mount point, fallback to ~/.vifm/trash
 set trashdir=%r/.vifm-Trash,$HOME/.vifm/trash
 
-" enable integration with terminal multiplexers
-screen
-
 " ==============================================================================
 " custom status line look
 
