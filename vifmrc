@@ -150,9 +150,6 @@ nnoremap ,w :set invwrap<cr>
 " faster search of files that start with a particular string
 nnoremap f/ /^
 
-" clear local filename filter
-nnoremap zr =<c-u><cr>
-
 " substitute in all files
 nnoremap as :%s/
 
