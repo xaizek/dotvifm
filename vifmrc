@@ -89,7 +89,7 @@ set rulerformat="%2l-%S%[ +%0-%]"
 
 " what should be saved automatically between vifm runs
 set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,phistory,fhistory
-           \,dirstack,registers,bookmarks
+           \,dirstack,registers,bookmarks,bmarks
 
 " use trash directory per mount point, fallback to ~/.vifm/trash
 set trashdir=%r/.vifm-Trash,$HOME/.vifm/trash
