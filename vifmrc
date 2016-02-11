@@ -179,12 +179,12 @@ nnoremap O :!gvim %f &<cr>
 " file lists configuration
 
 " default set of view columns
-windo set viewcolumns=-{name}..,6{}.
+windo set viewcolumns=*{name}..,6{}.
 
 " brief information about files
-nnoremap ,b :set viewcolumns=-{name}..,6{}.<cr>
+nnoremap ,b :set viewcolumns=*{name}..,6{}.<cr>
 " detailed information about files
-nnoremap ,d :set viewcolumns=-{name}.,10{perms},12{uname},-7{gname},10{size}.,20{mtime}<cr>
+nnoremap ,d :set viewcolumns=*{name}.,10{perms},12{uname},-7{gname},10{size}.,20{mtime}<cr>
 
 " ==============================================================================
 " general bookmarks
