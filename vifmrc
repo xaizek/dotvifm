@@ -179,7 +179,7 @@ nnoremap O :!gvim %f &<cr>
 " file lists configuration
 
 " default set of view columns
-windo set viewcolumns=*{name}..,6{}.
+set viewcolumns=*{name}..,6{}.
 
 " brief information about files
 nnoremap ,b :set viewcolumns=*{name}..,6{}.<cr>
@@ -207,7 +207,7 @@ mark V ~/.vim/bundle/
 " *.meta - magnet-link file for torrents
 " .*~ - temporary files
 " $RECYCLE.BIN - trash bin on Windows volumes
-windo filter! /^.*\.(lo|o|d|class|py[co]|meta)$|.*~$|^\$RECYCLE\.BIN\/$/
+filter! /^.*\.(lo|o|d|class|py[co]|meta)$|.*~$|^\$RECYCLE\.BIN\/$/
 
 " ==============================================================================
 " color scheme
