@@ -158,6 +158,7 @@ nnoremap as :%s/
 
 " creates directory and immediately enters it
 command! mkcd :mkdir %a | cd %a
+command! mkcd! :mkdir! %a | cd %a
 
 " run make in current directory
 command! make !!make %a
