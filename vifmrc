@@ -25,6 +25,9 @@ endif
 " change appearance of middle border
 set fillchars=vborder:·
 
+" use popup window instead of a single line for completion
+set wildstyle=popup
+
 " ==============================================================================
 " various options
 
