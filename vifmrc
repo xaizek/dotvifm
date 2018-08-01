@@ -104,6 +104,9 @@ set title
 " perform file operations via system calls
 set syscalls
 
+" always match characters on f/F/;/, in a case sensitive way
+set caseoptions=G
+
 " ==============================================================================
 " custom status line look
 
