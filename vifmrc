@@ -208,8 +208,14 @@ command! target : let $VIMARGS = '--servername "%a"'
                \| execute "!tmux %%i set-environment VIMARGS '".$VIMARGS."'"
 
 " open file in existing instance of gvim (uses target)
-nnoremap o :    ![ -z "$(gvim --serverlist)" ] && gvim $VIMARGS %f
-           \ || gvim $VIMARGS --remote-tab-silent %f &<cr>
+if executable('run-gvim')
+    " run-gvim can be a custom wrapper for gvim that does some extra work
+    nnoremap o :    ![ -z "$(gvim --serverlist)" ] && run-gvim %f
+               \ || run-gvim --remote-tab-silent %f:p &<cr>
+else
+    nnoremap o :    ![ -z "$(gvim --serverlist)" ] && gvim $VIMARGS %f
+               \ || gvim $VIMARGS --remote-tab-silent %f:p &<cr>
+endif
 " open file in new instance of gvim
 nnoremap O :!gvim %f &<cr>
 
