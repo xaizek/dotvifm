@@ -107,6 +107,9 @@ set syscalls
 " always match characters on f/F/;/, in a case sensitive way
 set caseoptions=G
 
+" mount FUSE file-systems here
+set fusehome=~/.vifm/.fuse
+
 " ==============================================================================
 " custom status line look
 
