@@ -28,6 +28,9 @@ set fillchars=vborder:·
 " use popup window instead of a single line for completion
 set wildstyle=popup
 
+" show suggestions
+set suggestoptions=normal,visual,view,otherpane,delay,keys,registers,marks
+
 " ==============================================================================
 " various options
 
