@@ -250,7 +250,7 @@ filter! /^.*\.(lo|o|d|class|py[co]|meta)$|.*~$|^\$RECYCLE\.BIN\/$/
 " ==============================================================================
 " color scheme
 
-colorscheme almost-default
+colorscheme near-default
 
 " ==============================================================================
 " load machine specific local set of settings

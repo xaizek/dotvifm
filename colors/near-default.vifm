@@ -1,0 +1,110 @@
+" vim: filetype=vifm :
+
+highlight clear
+highlight Win        cterm=none                   ctermfg=white   ctermbg=default
+highlight BrokenLink cterm=bold                   ctermfg=red     ctermbg=default
+highlight Socket     cterm=bold                   ctermfg=magenta ctermbg=default
+highlight Device     cterm=bold,reverse           ctermfg=red     ctermbg=default
+highlight Fifo       cterm=bold,reverse           ctermfg=cyan    ctermbg=default
+highlight CurrLine   cterm=reverse,bold           ctermfg=default ctermbg=default
+highlight TopLine    cterm=none                   ctermfg=black   ctermbg=white
+highlight TopLineSel cterm=bold                   ctermfg=16      ctermbg=default
+highlight StatusLine cterm=none                   ctermfg=black   ctermbg=white
+highlight WildMenu   cterm=underline,bold,reverse ctermfg=yellow  ctermbg=black
+highlight CmdLine    cterm=bold                   ctermfg=white   ctermbg=default
+highlight ErrorMsg   cterm=bold                   ctermfg=white   ctermbg=red
+highlight Border     cterm=none                   ctermfg=white   ctermbg=default
+highlight OtherLine  cterm=reverse                ctermfg=234     ctermbg=white
+highlight SuggestBox cterm=bold,reverse           ctermfg=cyan    ctermbg=default
+highlight AuxWin     cterm=none                   ctermfg=default ctermbg=233
+
+" no 256-color palette on Windows
+if $OS == 'Windows_NT'
+    highlight Directory   cterm=bold ctermfg=cyan    ctermbg=default
+    highlight Link        cterm=bold ctermfg=yellow  ctermbg=default
+    highlight Executable  cterm=bold ctermfg=green   ctermbg=default
+    highlight Selected    cterm=bold ctermfg=magenta ctermbg=default
+    highlight CmpMismatch cterm=bold ctermfg=white   ctermbg=red
+    finish
+endif
+
+highlight Directory   cterm=bold ctermfg=123     ctermbg=default
+highlight Link        cterm=bold ctermfg=229     ctermbg=default
+highlight Executable  cterm=bold ctermfg=119     ctermbg=default
+highlight Selected    cterm=bold ctermfg=213     ctermbg=default
+highlight CmpMismatch cterm=bold ctermfg=white   ctermbg=88
+
+" software documentation
+highlight {COPYRIGHT,COPYING*,BUGS,ChangeLog*,FAQ,INSTALL*,LICEN[CS]E,NEWS,
+          \README*,AUTHORS,TODO,THANKS}
+        \ cterm=none ctermfg=187 ctermbg=default
+" build system files
+highlight {Makefile,Makefile.am,Makefile.in,Makefile.win,*.mak,*.mk,
+          \CMakeLists.txt}
+        \ cterm=none ctermfg=121 ctermbg=default
+" archives
+highlight {*.7z,*.ace,*.arj,*.bz2,*.cpio,*.deb,*.dz,*.gz,*.jar,*.lzh,*.lzma,
+          \*.rar,*.rpm,*.rz,*.tar,*.taz,*.tb2,*.tbz,*.tbz2,*.tgz,*.tlz,*.trz,
+          \*.txz,*.tz,*.tz2,*.xz,*.z,*.zip,*.zoo}
+        \ cterm=none ctermfg=215 ctermbg=default
+" documents
+highlight {*.djvu,*.htm,*.html,*.shtml,*.css,*.markdown,*.md,*[^0-9].[1-9],
+          \*.mkd,*.org,*.pandoc,*.pdc,*.pdf,*.epub,*.fb2,*.tex,*.txt,*.xhtml,
+          \*.xml,*.pptx,*.ppt,*.doc,*.docx,*.xls,*.xls[mx],*.mobi}
+        \ cterm=none ctermfg=217 ctermbg=default
+" media
+highlight {*.aac,*.anx,*.asf,*.au,*.avi,*.ts,*.axa,*.axv,*.divx,*.flac,*.m2a,
+          \*.m2v,*.m4a,*.m4p,*.m4v,*.mid,*.midi,*.mka,*.mkv,*.mov,*.mp3,*.mp4,
+          \*.flv,*.mp4v,*.mpc,*.mpeg,*.mpg,*.nuv,*.oga,*.ogg,*.ogv,*.ogx,*.pbm,
+          \*.pgm,*.qt,*.ra,*.ram,*.rm,*.spx,*.vob,*.wav,*.wma,*.wmv,*.xvid,
+          \*.ac3,*.webm}
+        \ cterm=none ctermfg=49 ctermbg=default
+" images
+highlight {*.bmp,*.gif,*.jpeg,*.jpg,*.ico,*.png,*.ppm,*.svg,*.svgz,*.tga,*.tif,
+          \*.tiff,*.xbm,*.xcf,*.xpm,*.xspf,*.xwd}
+        \ cterm=none ctermfg=117 ctermbg=default
+" executables
+highlight {*.sh,*.bash,*.bat,*.btm,*.cmd,*.com,*.dll,*.exe,*.run,*.msu,*.msi}
+        \ cterm=none ctermfg=77 ctermbg=default
+" source code
+highlight {*.patch,*.diff,*.py,*.[ch]pp,*.mk,*.c,*.h,*.[ch]pp,*.cc,*.hs,*.php}
+        \ cterm=none ctermfg=193 ctermbg=default
+
+finish
+
+" alternative colors
+"228,155
+"218,219,155,119
+"111,109,204,173
+"222,187,218,203,174,211,219,144,145,147,152,193,182,213,112
+"117,39
+"177,225,189,219,187,79,43,223,217
+"highlight OtherLine  cterm=none                   ctermfg=default ctermbg=default
+"208,magenta
+"209,210
+"81,cyan,45,51,87
+"228
+"119,156
+" highlight Selected   cterm=bold                   ctermfg=255 ctermbg=magenta
+"highlight OtherLine  cterm=reverse                ctermfg=234 ctermbg=default
+
+" highlight {*.h,*.c}  cterm=bold ctermfg=yellow
+" highlight /\.(7z|Z|a|ace|alz|apkg|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lrz|lz|lzma|lzo|rar|rpm|rz|t7z|tZ|tar|tbz|tbz2|tgz|tlz|txz|tzo|war|xz|zip)$/ ctermfg=red
+" highlight /.*\.7z$|.*\.ACE$|.*\.RAR$|.*\.Z$|.*\.ZIP$|.*\.ace$|.*\.arj$|.*\.bz2$|.*\.cpio$|.*\.deb$|.*\.dz$|.*\.gz$|.*\.jar$|.*\.lzh$|.*\.lzma$|.*\.rar$|.*\.rpm$|.*\.rz$|.*\.tar$|.*\.taz$|.*\.tb2$|.*\.tbz$|.*\.tbz2$|.*\.tgz$|.*\.tlz$|.*\.trz$|.*\.txz$|.*\.tz$|.*\.tz2$|.*\.xz$|.*\.z$|.*\.zip$|.*\.zoo$/ cterm=bold ctermfg=red ctermbg=default
+" highlight /.*\.BAT$|.*\.BTM$|.*\.CMD$|.*\.COM$|.*\.DLL$|.*\.EXE$|.*\.bat$|.*\.btm$|.*\.cmd$|.*\.com$|.*\.dll$|.*\.exe$/ cterm=bold ctermfg=green ctermbg=default
+" highlight /.*\.AAC$|.*\.ASF$|.*\.AVI$|.*\.BMP$|.*\.DIVX$|.*\.FLAC$|.*\.GIF$|.*\.JPEG$|.*\.JPG$|.*\.M2A$|.*\.M2V$|.*\.M4A$|.*\.M4P$|.*\.M4V$|.*\.MKV$|.*\.MOV$|.*\.MP3$|.*\.MP4$|.*\.MPC$|.*\.MPEG$|.*\.MPG$|.*\.OGG$|.*\.PNG$|.*\.RA$|.*\.RAM$|.*\.RM$|.*\.TGA$|.*\.TIF$|.*\.TIFF$|.*\.VOB$|.*\.WAV$|.*\.WMA$|.*\.WMV$|.*\.XWD$|.*\.aac$|.*\.anx$|.*\.asf$|.*\.au$|.*\.avi$|.*\.axa$|.*\.axv$|.*\.bmp$|.*\.divx$|.*\.flac$|.*\.gif$|.*\.jpeg$|.*\.jpg$|.*\.m2a$|.*\.m2v$|.*\.m4a$|.*\.m4p$|.*\.m4v$|.*\.mid$|.*\.midi$|.*\.mka$|.*\.mkv$|.*\.mov$|.*\.mp3$|.*\.mp4$|.*\.mp4v$|.*\.mpc$|.*\.mpeg$|.*\.mpg$|.*\.nuv$|.*\.oga$|.*\.ogg$|.*\.ogv$|.*\.ogx$|.*\.pbm$|.*\.pgm$|.*\.png$|.*\.ppm$|.*\.qt$|.*\.ra$|.*\.ram$|.*\.rm$|.*\.spx$|.*\.svg$|.*\.svgz$|.*\.tga$|.*\.tif$|.*\.tiff$|.*\.vob$|.*\.wav$|.*\.wma$|.*\.wmv$|.*\.xbm$|.*\.xcf$|.*\.xpm$|.*\.xspf$|.*\.xvid$|.*\.xwd$/ cterm=bold ctermfg=magenta ctermbg=default
+
+" highlight Win cterm=none ctermfg=default ctermbg=blue
+
+" file name specific highlight
+" highlight {*.djvu,*.html,*.xml} cterm=underline ctermfg=188 ctermbg=default
+" highlight /.*authors$|.*bugs$|.*todo$/ cterm=underline ctermfg=187 ctermbg=default
+
+highlight BrokenLink cterm=bold ctermfg=red ctermbg=default
+highlight Device cterm=bold ctermfg=yellow ctermbg=default
+highlight Directory cterm=bold ctermfg=blue ctermbg=default
+highlight Executable cterm=bold ctermfg=green ctermbg=default
+highlight Fifo cterm=none ctermfg=yellow ctermbg=default
+highlight Link cterm=bold ctermfg=cyan ctermbg=default
+highlight Socket cterm=bold ctermfg=magenta ctermbg=default
+highlight Win cterm=none ctermfg=default ctermbg=default
