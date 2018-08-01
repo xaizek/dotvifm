@@ -144,10 +144,13 @@ nnoremap K <space>k<space>
 " open file in the background using its default program
 nnoremap gb :file &<cr>l
 
-" faster file renaming
+" mappings for faster file renaming
+" prepend to name
 nnoremap I cw<c-a>
-nnoremap cc cw<c-u>
-nnoremap A cw<c-w>
+" replace file name stem
+nnoremap cc cW<c-u>
+" append to name
+nnoremap A cw
 
 " open vim to edit .vifmrc
 nnoremap ,c :write | execute ':!%n${EDITOR:-vim} $MYVIFMRC' | restart<cr>
