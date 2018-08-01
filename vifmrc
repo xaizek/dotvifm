@@ -17,6 +17,10 @@ endif
 
 " hide side borders
 set tuioptions-=s
+if $TERM != 'linux'
+    " use Unicode ellipsis
+    set tuioptions+=u
+endif
 
 " change appearance of middle border
 set fillchars=vborder:·
