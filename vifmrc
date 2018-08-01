@@ -89,7 +89,7 @@ set tabstop=2
 set dotdirs=
 
 " custom ruler format
-set rulerformat="%2l-%S%[ +%0-%]"
+set rulerformat='%2l-%S%[ +%x%]'
 
 " what should be saved automatically between vifm runs
 set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,phistory,fhistory
