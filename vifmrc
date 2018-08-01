@@ -176,6 +176,20 @@ nnoremap as :%s/
 qnoremap <space> <tab>
 qnoremap <s-tab> <tab>
 
+" toggle between sorting: by name <--> by size <--> by mtime
+command! togglesort
+         \ :if &sort == '-size,+name'
+         \ |    set sort=+mtime
+         \ |    echo 'Sorted by modification date'
+         \ |elseif &sort == '+name'
+         \ |    set sort=-size
+         \ |    echo 'Sorted by size'
+         \ |else
+         \ |    set sort=+name
+         \ |    echo 'Sorted by name'
+         \ |endif
+nnoremap ,S :togglesort<cr>
+
 " ==============================================================================
 " various commands
 
