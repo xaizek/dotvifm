@@ -134,21 +134,21 @@ nnoremap < <c-w><
 nnoremap > <c-w>>
 
 " shellout
-nnoremap s :shell<cr>
+nnoremap <silent> s :shell<cr>
 
 " display sorting dialog
-nnoremap S :sort<cr>
+nnoremap <silent> S :sort<cr>
 
 " toggle visibility of preview window
-nnoremap w :view<cr>
-vnoremap w :view<cr>gv
+nnoremap <silent> w :view<cr>
+vnoremap <silent> w :view<cr>gv
 
 " moving cursor in another pane
-nnoremap J <space>j<space>
-nnoremap K <space>k<space>
+nnoremap <silent> J <space>j<space>
+nnoremap <silent> K <space>k<space>
 
 " open file in the background using its default program
-nnoremap gb :file &<cr>l
+nnoremap <silent> gb :file &<cr>l
 
 " mappings for faster file renaming
 " prepend to name
@@ -210,11 +210,11 @@ command! target : let $VIMARGS = '--servername "%a"'
 " open file in existing instance of gvim (uses target)
 if executable('run-gvim')
     " run-gvim can be a custom wrapper for gvim that does some extra work
-    nnoremap o :    ![ -z "$(gvim --serverlist)" ] && run-gvim %f
-               \ || run-gvim --remote-tab-silent %f:p &<cr>
+    nnoremap <silent> o :    ![ -z "$(gvim --serverlist)" ] && run-gvim %f
+                        \ || run-gvim --remote-tab-silent %f:p &<cr>
 else
-    nnoremap o :    ![ -z "$(gvim --serverlist)" ] && gvim $VIMARGS %f
-               \ || gvim $VIMARGS --remote-tab-silent %f:p &<cr>
+    nnoremap <silent> o :    ![ -z "$(gvim --serverlist)" ] && gvim $VIMARGS %f
+                        \ || gvim $VIMARGS --remote-tab-silent %f:p &<cr>
 endif
 " open file in new instance of gvim
 nnoremap O :!gvim %f &<cr>
