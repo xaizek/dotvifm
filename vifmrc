@@ -231,6 +231,28 @@ nnoremap ,b :set viewcolumns=*{name}..,6{}.<cr>
 nnoremap ,d :set viewcolumns=*{name}.,10{perms},12{uname},-7{gname},10{size}.,20{mtime}<cr>
 
 " ==============================================================================
+" tabs
+
+" go to previous tab page or move current tab page to position specified by the
+" count
+nnoremap <silent> gT : <c-u>
+                    \| if v:count == 0
+                    \|     execute 'normal gT'
+                    \| elseif v:count > tabpagenr('$')
+                    \|     tabmove
+                    \| elseif v:count >= tabpagenr()
+                    \|     execute 'tabmove' v:count
+                    \| elseif v:count < tabpagenr()
+                    \|     execute 'tabmove' v:count - 1
+                    \| endif
+                    \| <cr>
+
+" switch to the next tab page
+nnoremap <c-n> gt
+" switch to the previous tab page
+nnoremap <c-p> gT
+
+" ==============================================================================
 " general bookmarks
 
 mark b ~/bin/
