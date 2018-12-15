@@ -1,11 +1,15 @@
-## Install
+## Install ##
 
 ```bash
-git clone https://github.com/xaizek/dotvifm.git ~/.vifm
+git clone $URL ~/.vifm
 ```
 
-## Machine-specific configuration
+## Machine-specific configuration ##
 
-All local settings should be placed in `~/.vifm/vifmrc_local` file, which is
-assumed to exist.  It might be empty, but it's better to have it anyway as it
-prevents vifm from displaying errors on the status bar.
+All local settings should be kept in two files:
+
+* `$VIFM/vifmrc_settings` -- place to set `$VIFMRC_HAS_*` variables
+* `$VIFM/vifmrc_local`    -- place to do additional configuration
+
+Both files are assumed to exist.  They might be empty, but it's better to have
+them anyway as it prevents vifm from displaying errors on the status bar.

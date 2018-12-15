@@ -1,6 +1,12 @@
 " vim: set textwidth=80 syntax+=.autofold :
 
 " ==============================================================================
+" load machine specific settings of configuration
+
+let $VIFMRC_HAS_RICH_FONT = ''
+source $VIFM/vifmrc_settings
+
+" ==============================================================================
 " nesting detection
 
 if $INSIDE_VIFM != ''
