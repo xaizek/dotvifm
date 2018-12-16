@@ -122,6 +122,11 @@ set caseoptions=G
 " mount FUSE file-systems here
 set fusehome=~/.vifm/.fuse
 
+" ignore .git directory on :find
+set findprg='find %s %a -print ,
+            \ -type d \( ! -readable -o ! -executable -o -path "*/.git" \)
+            \ -prune'
+
 " ==============================================================================
 " custom status line look
 
