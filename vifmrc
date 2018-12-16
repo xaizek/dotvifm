@@ -206,6 +206,9 @@ nnoremap f/ /^
 " substitute in all files
 nnoremap as :%s/
 
+" force file editing rather than opening it
+nnoremap E :edit<cr>
+
 " use space and shift-tab as tab in quick view mode
 qnoremap <space> <tab>
 qnoremap <s-tab> <tab>
