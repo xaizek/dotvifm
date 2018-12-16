@@ -10,10 +10,10 @@ source $VIFM/vifmrc_settings
 " nesting detection
 
 if $INSIDE_VIFM != ''
-    let $SL_PREFIX = '[V] |'
+    let $SL_PREFIX = 'vifm '
 else
     if $PS1 != ''
-        let $SL_PREFIX = '[b] |'
+        let $SL_PREFIX = 'bash '
     endif
     let $INSIDE_VIFM = 'true'
 endif
@@ -127,10 +127,33 @@ set fusehome=~/.vifm/.fuse
 
 " don't display file user/group on Windows
 if !has('win')
-    let $RIGHTS = '%10u:%-7g '
+    let $RIGHTS = '%[%u:%g%]'
 endif
 
-execute 'set' 'statusline=" '.$SL_PREFIX.' %t%= %A '.$RIGHTS.'%15E %20d  "'
+if $VIFMRC_HAS_RICH_FONT
+    let &statusline = ''
+    if $SL_PREFIX != ''
+        let &statusline = '%2*'.$SL_PREFIX.'%4*'
+    endif
+    let &statusline .= '%1*'           " left separator
+    let &statusline .= ' %t '          " file name
+    let &statusline .= ''             " left separator
+    let &statusline .= '%='            " fill the whole status line
+    let &statusline .= ''             " right separator
+    let &statusline .= ' %A '          " file attributes
+    let &statusline .= '%4*%2*'       " right separator
+    let &statusline .= ' '.$RIGHTS.' ' " user and group owners of the file
+    let &statusline .= '%3*%1*'       " right separator
+    let &statusline .= ' %5E '         " human readable cumulative file size
+    let &statusline .= '%4*%2*'       " right separator
+    let &statusline .= ' %d '          " file modification date and time
+else
+    let &statusline = ' '
+    if $SL_PREFIX != ''
+        let &statusline .= $SL_PREFIX.'| '
+    endif
+    let &statusline .= '%t%= %A '.$RIGHTS.'%15E %20d '
+endif
 
 " ==============================================================================
 " various mappings

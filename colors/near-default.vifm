@@ -34,6 +34,12 @@ highlight Executable  cterm=bold ctermfg=119     ctermbg=default
 highlight Selected    cterm=bold ctermfg=213     ctermbg=default
 highlight CmpMismatch cterm=bold ctermfg=white   ctermbg=88
 
+" for powerline in statusline
+highlight User1 ctermbg=white
+highlight User2 ctermbg=240 ctermfg=231 cterm=bold
+highlight User3 ctermbg=240 ctermfg=white
+highlight User4 ctermbg=white ctermfg=240
+
 " software documentation
 highlight {COPYRIGHT,COPYING*,BUGS,ChangeLog*,FAQ,INSTALL*,LICEN[CS]E,NEWS,
           \README*,AUTHORS,TODO,THANKS}
