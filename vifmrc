@@ -198,7 +198,7 @@ nnoremap ,c :write | execute ':!%n${EDITOR:-vim} $MYVIFMRC' | restart<cr>
 nnoremap ,C :!gvim --remote-tab-silent $MYVIFMRC &<cr>
 
 " toggle wrap setting on ,w key
-nnoremap ,w :set invwrap<cr>
+nnoremap <silent> ,w :set invwrap<cr>
 
 " faster search of files that start with a particular string
 nnoremap f/ /^
@@ -263,9 +263,9 @@ nnoremap O :!gvim %f &<cr>
 set viewcolumns=*{name}..,6{}.
 
 " brief information about files
-nnoremap ,b :set viewcolumns=*{name}..,6{}.<cr>
+nnoremap <silent> ,b :set viewcolumns=*{name}..,6{}.<cr>
 " detailed information about files
-nnoremap ,d :set viewcolumns=*{name}.,10{perms},12{uname},-7{gname},10{size}.,20{mtime}<cr>
+nnoremap <silent> ,d :set viewcolumns=*{name}.,10{perms},12{uname},-7{gname},10{size}.,20{mtime}<cr>
 
 " ==============================================================================
 " tabs
