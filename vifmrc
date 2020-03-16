@@ -296,7 +296,7 @@ mark b ~/bin/
 mark c ~/.vifm/
 mark h ~/
 mark t ~/tmp/
-mark V ~/.vim/bundle/
+mark V ~/.vim/pack/
 
 " ==============================================================================
 " filename filtering
