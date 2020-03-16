@@ -46,7 +46,7 @@ highlight {COPYRIGHT,COPYING*,BUGS,ChangeLog*,FAQ,INSTALL*,LICEN[CS]E,NEWS,
         \ cterm=none ctermfg=187 ctermbg=default
 " build system files
 highlight {Makefile,Makefile.am,Makefile.in,Makefile.win,*.mak,*.mk,
-          \CMakeLists.txt}
+          \CMakeLists.txt,*.pro}
         \ cterm=none ctermfg=121 ctermbg=default
 " archives
 highlight {*.7z,*.ace,*.arj,*.bz2,*.cpio,*.deb,*.dz,*.gz,*.jar,*.lzh,*.lzma,
