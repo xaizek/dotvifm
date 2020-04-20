@@ -237,6 +237,19 @@ command! mkcd! :mkdir! %a | cd %a
 " run make in current directory
 command! make !!make %a
 
+" use Vim to diff files
+" uses selection of current pane when it contains more than one file
+" otherwise uses left pane file and right pane file keeping order inside Vim
+command! diff : if expand('%%c') == expand('%%f')
+            \ |     if paneisat('right') && paneisat('bottom')
+            \ |         execute '!vim -d %%C %%c'
+            \ |     else
+            \ |         execute '!vim -d %%c %%C'
+            \ |     endif
+            \ | else
+            \ |     execute '!vim -d %%f'
+            \ | endif
+
 " ==============================================================================
 " targeting Vim instances
 
