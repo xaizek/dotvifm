@@ -181,6 +181,10 @@ vnoremap <silent> w :view<cr>gv
 nnoremap <silent> J <space>j<space>
 nnoremap <silent> K <space>k<space>
 
+" moving though sibling directories
+nnoremap <c-j> ]R
+nnoremap <c-k> [R
+
 " open file in the background using its default program
 nnoremap <silent> gb :file &<cr>l
 
