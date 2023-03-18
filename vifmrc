@@ -332,7 +332,7 @@ filter! /^.*\.(lo|o|d|class|py[co]|meta)$|.*~$|^\$RECYCLE\.BIN\/$/
 " ==============================================================================
 " color scheme
 
-colorscheme near-default
+colorscheme Default-256 near-default Default
 
 " ==============================================================================
 " "icons" for files
