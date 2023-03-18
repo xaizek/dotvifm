@@ -234,6 +234,9 @@ nnoremap <silent> ,S :togglesort<cr>
 " ==============================================================================
 " various commands
 
+" makes a backup copy
+command! bak :clone %c.bak
+
 " creates directory and immediately enters it
 command! mkcd :mkdir %a | cd %a
 command! mkcd! :mkdir! %a | cd %a
