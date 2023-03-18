@@ -327,7 +327,9 @@ mark V ~/.vim/pack/
 " *.meta - magnet-link file for torrents
 " .*~ - temporary files
 " $RECYCLE.BIN - trash bin on Windows volumes
-filter! /^.*\.(lo|o|d|class|py[co]|meta)$|.*~$|^\$RECYCLE\.BIN\/$/
+" CODE_OF_CONDUCT.md - crap in text form
+filter! {*.lo,*.o,*.d,*.class,*.pyc,*.pyo,*.meta,.*~,$RECYCLE.BIN/,
+        \CODE_OF_CONDUCT.md}
 
 " ==============================================================================
 " color scheme
