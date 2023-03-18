@@ -229,7 +229,7 @@ command! togglesort
          \ |    set sort=+name
          \ |    echo 'Sorted by name'
          \ |endif
-nnoremap ,S :togglesort<cr>
+nnoremap <silent> ,S :togglesort<cr>
 
 " ==============================================================================
 " various commands
