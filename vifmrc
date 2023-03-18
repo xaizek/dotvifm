@@ -237,6 +237,9 @@ nnoremap <silent> ,S :togglesort<cr>
 " makes a backup copy
 command! bak :clone %c.bak
 
+" makes a detached signature (.asc)
+command! sign gpg2 --armor --detach-sign %c
+
 " creates directory and immediately enters it
 command! mkcd :mkdir %a | cd %a
 command! mkcd! :mkdir! %a | cd %a
