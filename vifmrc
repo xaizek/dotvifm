@@ -49,9 +49,6 @@ set trash
 " how many directories to store in all kinds of history
 set history=1000
 
-" allow partially entered external commands with unambiguous beginning using :!
-set fastrun
-
 " natural sort of (version) numbers within filenames
 set sortnumbers
 
