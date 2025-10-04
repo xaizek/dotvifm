@@ -4,7 +4,9 @@
 " load machine specific settings of configuration
 
 let $VIFMRC_HAS_RICH_FONT = ''
-source $VIFM/vifmrc_settings
+if filereadable($VIFM.'/vifmrc_settings')
+    source $VIFM/vifmrc_settings
+endif
 
 " ==============================================================================
 " nesting detection
@@ -375,6 +377,8 @@ endif
 " ==============================================================================
 " load machine specific local set of settings
 
-source $VIFM/vifmrc_local
+if filereadable($VIFM.'/vifmrc_local')
+    source $VIFM/vifmrc_local
+endif
 
 " ==============================================================================
