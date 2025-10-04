@@ -72,7 +72,7 @@ set runexec
 " format for displaying time
 set timefmt=%y.%m.%d\ %H:%M
 
-" show list of matches on tab complition in command-line mode
+" show list of matches on tab completion in command-line mode
 set wildmenu
 
 " ignore case in search pattern unless it contains at least one uppercase letter
