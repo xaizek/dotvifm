@@ -137,7 +137,7 @@ if !has('win')
     let $RIGHTS = '%[%u:%g%]'
 endif
 
-if $VIFMRC_HAS_RICH_FONT
+if $VIFMRC_HAS_RICH_FONT != ''
     let &statusline = ''
     if $SL_PREFIX != ''
         let &statusline = '%2*'.$SL_PREFIX.'%4*'
@@ -347,7 +347,7 @@ colorscheme Default-256 near-default Default
 " ==============================================================================
 " "icons" for files
 
-if $VIFMRC_HAS_RICH_FONT
+if $VIFMRC_HAS_RICH_FONT != ''
     " file types
     set classify=' :dir:/, :exe:, :reg:, :link:'
     " various file names
