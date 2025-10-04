@@ -30,6 +30,9 @@ if $TERM != 'linux'
     set tuioptions+=u
 endif
 
+" use fixed-size middle border
+set tuioptions-=v
+
 " change appearance of middle border
 set fillchars=vborder:·
 
