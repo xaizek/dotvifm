@@ -66,8 +66,8 @@ set vimhelp
 " follow links on l or Enter automatically, not just navigate to target
 set nofollowlinks
 
-" allow automatic runing of executable files
-set runexec
+" do not start executable files automatically
+set norunexec
 
 " format for displaying time
 set timefmt=%y.%m.%d\ %H:%M
