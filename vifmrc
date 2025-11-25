@@ -134,6 +134,9 @@ if executable('plocate')
     set locateprg='plocate %a'
 endif
 
+" get rid of delay before drawing graphics
+set previewoptions+=graphicsdelay:0
+
 " ==============================================================================
 " custom status line look
 
