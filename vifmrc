@@ -137,6 +137,9 @@ endif
 " get rid of delay before drawing graphics
 set previewoptions+=graphicsdelay:0
 
+" always show completion for the following commands
+set wildinc=:bmgo,:session,:wingo
+
 " ==============================================================================
 " custom status line look
 
