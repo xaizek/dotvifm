@@ -244,6 +244,9 @@ command! togglesort
          \ |endif
 nnoremap <silent> ,S :togglesort<cr>
 
+" faster way of switching sessions
+nnoremap <silent> - :session<space>
+
 " ==============================================================================
 " various commands
 
